@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Spam Detector</title>
+</head>
+<body>
+<script>
+	
+	function detectSpam1(input1){
+		input1=input1.toLowerCase();
+		return input1.indexOf("fake");
+	}
+	
+	var mystring1=prompt("Enter a string");
+	alert(detectSpam1(mystring1));
+	
+	function detectSpam(input){
+		input=input.toLowerCase();
+		if(input.indexOf("fake")<0){
+			return false;
+		}
+			return true;
+	}
+	
+	var mystring=prompt("Enter a string");
+	alert(detectSpam(mystring));
+	
+	
+	function Box(width,length,height){
+		 function volume(a,b,c){
+			return a*b*c;
+		}
+		this.boxVolume=volume(width,length,height);
+	}
+	var crate=new Box(5,4,3);
+	alert("Volume= " + crate.boxVolume);
+</script>
+</body>
+</html>
