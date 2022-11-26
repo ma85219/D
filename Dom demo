@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>DOM</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			function aboutImage() {
+				var imageSource = document.getElementById("pier").src;
+				alert("The image source is " + imageSource);
+				var imageFloat = document.getElementById("pier").style.float;
+				alert("The float of the image is " + imageFloat);
+				var imageMargin=document.getElementById("pier").style.margin;
+				alert("The margin of the image is "+ imageMargin);
+			
+			}
+			
+			function changeImage() {
+				document.getElementById("night").style.display = "block";
+				document.getElementById("night").style.float = "right";	
+				document.getElementById("night").style.border = "2px solid";
+				document.getElementById("night").style.padding = "10px";
+				document.getElementById("night").style.width = "200px";
+				document.getElementById("pier").style.display = "none";				
+				
+			}
+			function changeContent(){
+				var fam=prompt("What is the font family","Impact");
+				var siz=prompt("What is the font size (in pt)","28");
+				var col=prompt("What is the text color","red");
+				
+				document.getElementById("content").style.color = col;
+				document.getElementById("content").style.fontFamily = fam;
+				document.getElementById("content").style.fontSize = siz;
+				
+			}
+
+
+		</script>
+	</head>
+	<body>
+		<div id="container" />
+			
+			<div id = "content">
+				<p id="firstPara">
+				<img id="pier" src="C:\Users\ma852\Desktop\palaceday.jpg" style="float:left; margin: 10px;">
+				<img id="night" src="C:\Users\ma852\Desktop\palaceNight.jpg" style="display:none;">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ipsum cursus 
+				eros pulvinar dictum eu eget lorem. Morbi id nisl diam. Fusce imperdiet tellus 
+				eu sapien tincidunt, cursus ultricies dolor viverra. Phasellus dignissim ut 
+				quam in sodales. Etiam cursus vestibulum pulvinar. Aenean pulvinar orci vel nulla 
+				rhoncus, ut aliquet dolor tempor. Maecenas sollicitudin urna tellus, placerat 
+				commodo nisl pulvinar at. Cras ipsum erat, semper eget pharetra sit amet, 
+				iaculis quis mauris. Praesent ac tellus egestas, scelerisque justo sed, 
+				sagittis velit. Nullam mollis eu justo vitae ultrices. Quisque tellus purus, 
+				interdum cursus tellus id, sagittis porta ipsum. Pellentesque eu turpis non 
+				urna euismod dapibus sollicitudin ut mi. Fusce eu mollis erat, id euismod nulla. 
+				Duis commodo lobortis purus, et tempus urna placerat feugiat. Nullam mi orci, 
+				auctor et metus vitae, posuere gravida felis. Vestibulum ultricies tellus et 
+				diam scelerisque, id feugiat nisi lobortis.</p>
+
+				<p id="secondPara">Donec porttitor orci ac luctus lacinia. Vivamus efficitur maximus dictum. Aliquam 
+				erat volutpat. Maecenas nec elit massa. Donec venenatis at erat a tempus. Vestibulum 
+				eget turpis nunc. Praesent id odio porttitor, accumsan ligula quis, blandit nisi. Duis 
+				vitae fermentum nisl. Praesent gravida orci sapien, non vulputate velit imperdiet quis. 
+				Donec ac dolor ac est vestibulum laoreet. Maecenas fringilla sem non nisi dignissim, id 
+				bibendum nulla facilisis. Mauris egestas nisi et risus sodales finibus. In hac 
+				habitasse platea dictumst. Aliquam erat volutpat. Morbi vestibulum venenatis ligula, 
+				sit amet elementum sapien mollis id. Sed eu blandit est. <p>
+			</div>
+			<div id = "buttons">
+				<button id="btnAbout" onclick="aboutImage()">About the image</button>
+				<button id="btnChange" onclick="changeImage()">Change the image</button>
+				<button id="ctChange" onclick="changeContent()">Change the content</button>
+			</div>
+		</div>
+	</body>
+</html>
