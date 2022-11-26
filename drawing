@@ -1,0 +1,45 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>	
+			Canvas Demo
+		</title>
+		<script>
+			function draw(){
+				var drawing=document.getElementById("drawing")
+				var pen=drawing.getContext("2d");
+				var colours=["red","green","blue","pink","orange"];
+				pen.strokeStyle="red";
+				height=30;
+				width=30;
+				for(i=1;i<=5;i++){
+					pen.strokeRect(0,0,width,height);
+					pen.strokeStyle=colours[i-1];
+					width=width+30;
+					height=height+30;
+				}
+				
+				var sara=document.getElementById("sara");
+				var ctx=sara.getContext("2d");
+				ctx.strokeStyle="blue";
+				ctx.strokeRect(20,20,40,40);
+				ctx.strokeRect(240,20,40,40);
+				ctx.strokeRect(150,40,10,50);
+				ctx.strokeRect(60,110,175,20);
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body onload="draw()">
+		<h1>Drawing Demo</h1>
+			<canvas id="drawing" width="500" height="300" style="border:solid 2px">
+				<p>Your browser does not support canvas</p>
+			</canvas>
+			
+			<canvas id="sara" width="300" height="150" style="border:1px solid blue">
+			</canvas>
+			
+	</body>
+</html>
